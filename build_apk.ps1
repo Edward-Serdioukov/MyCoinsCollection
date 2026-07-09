@@ -10,7 +10,7 @@ $env:ANDROID_SDK_ROOT = $env:ANDROID_HOME
 
 Write-Host "Starting MyCoins build process..."
 
-# 1. Build React/Vite project
+# 1. Build React/Vite project 1
 Write-Host "Building web assets..."
 cmd /c "npm run build"
 
@@ -31,6 +31,7 @@ $outName = "MyCoins_Final.apk"
 if (Test-Path $apkPath) {
     Copy-Item $apkPath $outName -Force
     Write-Host "Build Successful! APK saved as $outName"
-} else {
+}
+else {
     Write-Host "Error: APK not found at $apkPath"
 }
