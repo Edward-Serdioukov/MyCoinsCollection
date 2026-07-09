@@ -1,0 +1,10 @@
+{
+  "appId": "com.edwardserdioukov.mycoins",
+  "appName": "My Coins Collection",
+  "webDir": "dist",
+  "plugins": {
+    "CapacitorHttp": {
+      "enabled": true
+    }
+  }
+}

@@ -1,0 +1,74 @@
+import React from 'react';
+import { Menu, Sun, Moon } from 'lucide-react';
+import { translations } from '../App';
+
+interface HeaderProps {
+  theme: 'light' | 'dark';
+  setTheme: (theme: 'light' | 'dark') => void;
+  language: 'en' | 'ru';
+  setLanguage: (lang: 'en' | 'ru') => void;
+  onMenuOpen: () => void;
+  onHomeClick: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({
+  theme,
+  setTheme,
+  language,
+  setLanguage,
+  onMenuOpen,
+  onHomeClick,
+}) => {
+  const t = translations[language];
+
+  return (
+    <header>
+      <div className="header-title-container">
+        <button className="logo-btn" onClick={onMenuOpen} title="Open Menu">
+          <Menu size={22} />
+        </button>
+        <h1 
+          className="app-title" 
+          onClick={onHomeClick} 
+          style={{ cursor: 'pointer' }}
+          title="Go to Home"
+        >
+          {t.appTitle}
+        </h1>
+      </div>
+
+      <div className="header-actions">
+        {/* Language switch */}
+        <select 
+          value={language} 
+          onChange={(e) => setLanguage(e.target.value as 'en' | 'ru')}
+          style={{
+            backgroundColor: 'var(--bg-tertiary)',
+            color: 'var(--text-main)',
+            border: '1px solid var(--border-color)',
+            padding: '0.25rem 0.5rem',
+            borderRadius: '6px',
+            fontWeight: 600,
+            fontSize: '0.85rem',
+            cursor: 'pointer',
+            outline: 'none'
+          }}
+        >
+          <option value="en">EN</option>
+          <option value="ru">RU</option>
+        </select>
+
+        {/* Theme switch */}
+        <button 
+          className="action-btn" 
+          onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+          title={theme === 'light' ? 'Switch to Dark' : 'Switch to Light'}
+        >
+          {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+        </button>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
