@@ -5,7 +5,6 @@ import OlympicGrid from './components/OlympicGrid';
 import CountryGrid from './components/CountryGrid';
 import CoinGrid from './components/CoinGrid';
 import DetailsView from './components/DetailsView';
-import HistoryView from './components/HistoryView';
 import HTMLHistoryView from './components/HTMLHistoryView';
 import MapView from './components/MapView';
 import StatsModal from './components/StatsModal';
@@ -24,7 +23,6 @@ export const translations = {
     submenuOlympicsMap: "Olympics Map",
     submenuCountriesMap: "Countries Map",
     menuInfo: "Information",
-    menuHistory: "History of Olympic Coins",
     menuHtmlHistory: "History (HTML)",
     menuStats: "Statistics",
     menuAbout: "About",
@@ -59,7 +57,6 @@ export const translations = {
     submenuOlympicsMap: "Карта Олимпиад",
     submenuCountriesMap: "Карта Стран",
     menuInfo: "Информация",
-    menuHistory: "История олимпийских монет",
     menuHtmlHistory: "История (HTML)",
     menuStats: "Статистика",
     menuAbout: "О программе",
@@ -244,13 +241,6 @@ function App() {
               ))}
             </div>
           </div>
-        )}
-
-        {view === 'history' && (
-          <HistoryView
-            language={language}
-            setLanguage={setLanguage}
-          />
         )}
 
         {view === 'htmlHistory' && (

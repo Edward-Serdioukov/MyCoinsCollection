@@ -104,14 +104,6 @@ const NavMenu: React.FC<NavMenuProps> = ({
           </button>
 
           <button 
-            className={`menu-item ${currentView === 'history' ? 'active' : ''}`}
-            onClick={() => handleNavigate('history')}
-          >
-            <BookOpen size={18} />
-            <span>{t.menuHistory}</span>
-          </button>
-
-          <button 
             className={`menu-item ${currentView === 'htmlHistory' ? 'active' : ''}`}
             onClick={() => handleNavigate('htmlHistory')}
           >
