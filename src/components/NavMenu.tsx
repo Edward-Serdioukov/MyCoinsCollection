@@ -132,6 +132,18 @@ const NavMenu: React.FC<NavMenuProps> = ({
             <HelpCircle size={18} />
             <span>{t.menuAbout}</span>
           </button>
+
+          <a 
+            href="https://myappst.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="menu-item"
+            style={{ textDecoration: 'none' }}
+            onClick={onClose}
+          >
+            <Globe size={18} />
+            <span>{language === 'en' ? 'More Apps' : 'Другие приложения'}</span>
+          </a>
         </div>
       </div>
     </>

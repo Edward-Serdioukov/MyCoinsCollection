@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, Sun, Moon } from 'lucide-react';
+import { Menu, Sun, Moon, Globe } from 'lucide-react';
 import { translations } from '../App';
 
 interface HeaderProps {
@@ -57,6 +57,18 @@ const Header: React.FC<HeaderProps> = ({
           <option value="en">EN</option>
           <option value="ru">RU</option>
         </select>
+
+        {/* Portfolio link */}
+        <a 
+          href="https://myappst.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="action-btn"
+          title={language === 'en' ? 'More Apps' : 'Другие приложения'}
+          style={{ textDecoration: 'none' }}
+        >
+          <Globe size={20} />
+        </a>
 
         {/* Theme switch */}
         <button 

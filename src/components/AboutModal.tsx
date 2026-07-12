@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Mail } from 'lucide-react';
+import { X, Mail, Globe } from 'lucide-react';
 import { translations } from '../App';
 
 interface AboutModalProps {
@@ -40,14 +40,28 @@ const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose, language }) =>
             </p>
           </div>
           
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.5rem' }}>
-            <Mail size={16} color="var(--accent-blue)" />
-            <a 
-              href="mailto:mycoins92@gmail.com" 
-              style={{ color: 'var(--accent-blue)', textDecoration: 'underline', fontWeight: 600, fontSize: '0.95rem' }}
-            >
-              mycoins92@gmail.com
-            </a>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginTop: '0.5rem', alignItems: 'center' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <Mail size={16} color="var(--accent-blue)" />
+              <a 
+                href="mailto:mycoins92@gmail.com" 
+                style={{ color: 'var(--accent-blue)', textDecoration: 'underline', fontWeight: 600, fontSize: '0.95rem' }}
+              >
+                mycoins92@gmail.com
+              </a>
+            </div>
+            
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <Globe size={16} color="var(--accent-blue)" />
+              <a 
+                href="https://myappst.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ color: 'var(--accent-blue)', textDecoration: 'underline', fontWeight: 600, fontSize: '0.95rem' }}
+              >
+                {language === 'en' ? 'More Apps Portfolio' : 'Портфолио приложений'}
+              </a>
+            </div>
           </div>
         </div>
         <div className="modal-footer">
