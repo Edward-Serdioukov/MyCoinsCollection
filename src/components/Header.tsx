@@ -6,7 +6,6 @@ interface HeaderProps {
   theme: 'light' | 'dark';
   setTheme: (theme: 'light' | 'dark') => void;
   language: 'en' | 'ru';
-  setLanguage: (lang: 'en' | 'ru') => void;
   onMenuOpen: () => void;
   onHomeClick: () => void;
 }
@@ -15,7 +14,6 @@ const Header: React.FC<HeaderProps> = ({
   theme,
   setTheme,
   language,
-  setLanguage,
   onMenuOpen,
   onHomeClick,
 }) => {
@@ -38,26 +36,6 @@ const Header: React.FC<HeaderProps> = ({
       </div>
 
       <div className="header-actions">
-        {/* Language switch */}
-        <select 
-          value={language} 
-          onChange={(e) => setLanguage(e.target.value as 'en' | 'ru')}
-          style={{
-            backgroundColor: 'var(--bg-tertiary)',
-            color: 'var(--text-main)',
-            border: '1px solid var(--border-color)',
-            padding: '0.25rem 0.5rem',
-            borderRadius: '6px',
-            fontWeight: 600,
-            fontSize: '0.85rem',
-            cursor: 'pointer',
-            outline: 'none'
-          }}
-        >
-          <option value="en">EN</option>
-          <option value="ru">RU</option>
-        </select>
-
         {/* Portfolio link */}
         <a 
           href="https://myappst.vercel.app/"

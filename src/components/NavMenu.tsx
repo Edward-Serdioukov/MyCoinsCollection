@@ -1,5 +1,5 @@
 import React from 'react';
-import { Landmark, Globe, Coins, Map, Info, BookOpen, BarChart3, HelpCircle, X } from 'lucide-react';
+import { Landmark, Globe, Coins, Map, Info, BarChart3, HelpCircle, X } from 'lucide-react';
 import { translations } from '../App';
 
 interface NavMenuProps {
@@ -101,14 +101,6 @@ const NavMenu: React.FC<NavMenuProps> = ({
           >
             <Info size={18} />
             <span>{t.menuInfo}</span>
-          </button>
-
-          <button 
-            className={`menu-item ${currentView === 'htmlHistory' ? 'active' : ''}`}
-            onClick={() => handleNavigate('htmlHistory')}
-          >
-            <BookOpen size={18} />
-            <span>{t.menuHtmlHistory}</span>
           </button>
 
           <button 

@@ -5,7 +5,6 @@ import OlympicGrid from './components/OlympicGrid';
 import CountryGrid from './components/CountryGrid';
 import CoinGrid from './components/CoinGrid';
 import DetailsView from './components/DetailsView';
-import HTMLHistoryView from './components/HTMLHistoryView';
 import MapView from './components/MapView';
 import StatsModal from './components/StatsModal';
 import AboutModal from './components/AboutModal';
@@ -23,7 +22,6 @@ export const translations = {
     submenuOlympicsMap: "Olympics Map",
     submenuCountriesMap: "Countries Map",
     menuInfo: "Information",
-    menuHtmlHistory: "History (HTML)",
     menuStats: "Statistics",
     menuAbout: "About",
     filterAll: "All",
@@ -57,7 +55,6 @@ export const translations = {
     submenuOlympicsMap: "Карта Олимпиад",
     submenuCountriesMap: "Карта Стран",
     menuInfo: "Информация",
-    menuHtmlHistory: "История (HTML)",
     menuStats: "Статистика",
     menuAbout: "О программе",
     filterAll: "Все",
@@ -103,9 +100,7 @@ function App() {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   // Settings
-  const [language, setLanguage] = useState<'en' | 'ru'>(() => {
-    return (localStorage.getItem('lang') as 'en' | 'ru') || 'en';
-  });
+  const language: 'en' | 'ru' = 'en';
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     return (localStorage.getItem('theme') as 'light' | 'dark') || 'light';
   });
@@ -115,10 +110,6 @@ function App() {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
   }, [theme]);
-
-  useEffect(() => {
-    localStorage.setItem('lang', language);
-  }, [language]);
 
   // Navigate helper
   const navigateTo = (newView: string, item: any = null, type: string = '') => {
@@ -170,7 +161,6 @@ function App() {
         theme={theme}
         setTheme={setTheme}
         language={language}
-        setLanguage={setLanguage}
         onMenuOpen={() => setIsMenuOpen(true)}
         onHomeClick={handleHomeClick}
       />
@@ -241,13 +231,6 @@ function App() {
               ))}
             </div>
           </div>
-        )}
-
-        {view === 'htmlHistory' && (
-          <HTMLHistoryView
-            language={language}
-            setLanguage={setLanguage}
-          />
         )}
 
         {(view === 'olympicsMap' || view === 'countriesMap') && (
