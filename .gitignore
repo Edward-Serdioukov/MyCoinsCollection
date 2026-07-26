@@ -10,6 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+android
 *.local
 
 # Editor directories and files
@@ -24,3 +25,11 @@ dist-ssr
 *.sw?
 MyCoins_Final.apk
 .gitignore
+medium_article_non_technical.md
+medium_article.md
+olympic_coins_banner.png
+travel_planner_banner.png
+vercel-deploy.txt
+.gitignore
+my-release-key.jks
+build_apk.ps1
