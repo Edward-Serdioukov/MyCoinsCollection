@@ -1,5 +1,4 @@
-[   
-   
+[
     {
         "src1": "coins/finland-500-markkaa-1952-1.jpg",
         "src2": "coins/finland-500-markkaa-1952.jpg",
@@ -99,7 +98,7 @@
         "url": "https://en.ucoin.net/coin/canada-10-dollars-1973/?cid=37486",
         "code": "1976s",
         "description": ""
-    },    
+    },
     {
         "src1": "coins/poland-200-zlotych-1980.jpg",
         "src2": "coins/poland-200-zlotych-1980-2.jpg",
@@ -347,6 +346,16 @@
         "country": "romania",
         "composition": "Nickel plated steel",
         "url": "https://en.ucoin.net/coin/romania-10-lei-1996/?tid=18732",
+        "code": "1996s",
+        "description": ""
+    },
+    {
+        "src1": "coins/croatia-2-lipa-1996.jpg",
+        "src2": "coins/croatia-2-lipa-1996-2.jpg",
+        "title": "2 Lipe (1996)",
+        "country": "croatia",
+        "composition": "Aluminium",
+        "url": "https://en.ucoin.net/coin/croatia-2-lipa-1996/?tid=3606",
         "code": "1996s",
         "description": ""
     },
@@ -779,7 +788,7 @@
         "url": "https://en.ucoin.net/coin/transnistria-1-ruble-2017/?tid=75727",
         "code": "2018w",
         "description": ""
-    },    
+    },
     {
         "src1": "coins/lithuania-20-euro-2020.jpg",
         "src2": "coins/lithuania-20-euro-2020-2.jpg",
@@ -929,7 +938,7 @@
         "url": "https://en.ucoin.net/coin/france-2-euro-2021/?tid=120529",
         "code": "2024s",
         "description": ""
-    },  
+    },
     {
         "src1": "coins/france-1-4-euro-2021.jpg",
         "src2": "coins/france-1-4-euro-2021-1.jpg",
@@ -939,7 +948,7 @@
         "url": "https://en.ucoin.net/coin/france-1-4-euro-2021/?tid=120770",
         "code": "2024s",
         "description": ""
-    },  
+    },
     {
         "src1": "coins/france-1-4-euro-2021-11.jpg",
         "src2": "coins/france-1-4-euro-2021-22.jpg",
@@ -981,7 +990,7 @@
         "description": ""
     },
     {
-        "src1": "coins/italy-3-euro-2026-11.jpg", 
+        "src1": "coins/italy-3-euro-2026-11.jpg",
         "src2": "coins/italy-3-euro-2026-22.jpg",
         "title": "3 Euro (2024)",
         "country": "italy",
@@ -991,7 +1000,7 @@
         "description": ""
     },
     {
-        "src1": "coins/italy-1-4-euro-2025-1.jpg", 
+        "src1": "coins/italy-1-4-euro-2025-1.jpg",
         "src2": "coins/italy-1-4-euro-2025.jpg",
         "title": "1/4 Euro (2025)",
         "country": "italy",
@@ -1001,7 +1010,7 @@
         "description": ""
     },
     {
-        "src1": "coins/italy-1-4-euro-2025-2.jpg", 
+        "src1": "coins/italy-1-4-euro-2025-2.jpg",
         "src2": "coins/italy-1-4-euro-2025.jpg",
         "title": "1/4 Euro (2025)",
         "country": "italy",
@@ -1011,7 +1020,7 @@
         "description": ""
     },
     {
-        "src1": "coins/italy-1-4-euro-2025-3.jpg", 
+        "src1": "coins/italy-1-4-euro-2025-3.jpg",
         "src2": "coins/italy-1-4-euro-2025.jpg",
         "title": "1/4 Euro (2025)",
         "country": "italy",
@@ -1020,5 +1029,4 @@
         "code": "2026w",
         "description": ""
     }
-
 ]

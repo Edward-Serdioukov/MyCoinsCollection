@@ -80,6 +80,16 @@
         "avatar": "/countries/avatars/cuba.png"
     },
     {
+        "src": "/countries/flag_horvatija.png",
+        "title": "Croatia",
+        "color": "green",
+        "url": "",
+        "country": "croatia",
+        "code": "",
+        "coordinates": {"latitude": 45.1, "longitude": 15.2},
+        "avatar": "/countries/avatars/croatia.png"
+    },
+    {
         "src": "/countries/flag-finland.jpg",
         "title": "Finland",
         "color": "green",
